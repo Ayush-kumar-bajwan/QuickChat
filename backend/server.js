@@ -12,7 +12,7 @@ dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
-connectDB();
+
 
 app.use(express.json());
 app.use(cookieParser());
@@ -29,5 +29,6 @@ app.get("*", (req, res) => {
 
 
 server.listen(PORT, ()=>{
+    connectDB();
     console.log(`Server is running on port : ${PORT}`)
 });
