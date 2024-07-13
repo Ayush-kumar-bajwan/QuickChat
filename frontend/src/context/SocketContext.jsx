@@ -15,7 +15,7 @@ export const SocketContextProvider = ({children})=>{
 
     useEffect(()=>{
       if(authUser){
-        const socket = io("https://quickchat-m178.onrender.com",{
+        const socket = io("https://quick-chat-dpvlxzwzk-ayush-kumar-bajwans-projects.vercel.app",{
           query:{
             userId: authUser._id,
           },
