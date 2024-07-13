@@ -21,7 +21,7 @@ app.use('/api/auth', authroutes);
 app.use('/api/messages',messageroutes);
 app.use('/api/user',userroutes);
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
+app.use(express.static(path.join(__dirname, "/frontend/build")));
 
 app.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
